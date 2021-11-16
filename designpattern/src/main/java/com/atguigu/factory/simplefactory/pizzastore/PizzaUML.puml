@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/class-diagram
+interface Pizza{
+    +prepare():void
+    +bake():void
+    +cut():void
+    +box():void
+}
+
+'class ChessPizza{}
+abstract class AbstractPizza{
+    -name: string
+    +abstract prepare():void
+    +cut():void
+    +box():void
+    +bake():void
+}
+AbstractPizza ..|> Pizza
+ChessPizza --|> AbstractPizza
+GreekPizza --|> AbstractPizza
+
+class ChessPizza{
+    +prepare():void
+}
+
+class GreekPizza{
+    +prepare():void
+}
+
+@enduml
