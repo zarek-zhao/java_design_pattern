@@ -16,23 +16,20 @@ public class Main {
         AsyncClass async1 = new AsyncClass();
 //        while(true){
 
-            Thread t1 = new Thread(async,"Thread-A");
-            Thread t2 = new Thread(async,"Thread-B");
-            Thread t3 = new Thread(async,"Thread-C");
-            Thread t4 = new Thread(async1,"Thread-D");
-            Thread t5 = new Thread(async1,"Thread-E");
-            Thread t6 = new Thread(async1,"Thread-F");
+        Thread t1 = new Thread(async, "Thread-A");
+        Thread t2 = new Thread(async, "Thread-B");
+        Thread t3 = new Thread(async, "Thread-C");
+        Thread t4 = new Thread(async1, "Thread-D");
+        Thread t5 = new Thread(async1, "Thread-E");
+        Thread t6 = new Thread(async1, "Thread-F");
 
 
-            t1.start();
-            t2.start();
-            t3.start();
-            t4.start();
-            t5.start();
-            t6.start();
-
-
-
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+        t5.start();
+        t6.start();
 
 
     }
@@ -54,7 +51,7 @@ class AsyncClass implements Runnable {
 //        枚举
 //        Singleton singleton = com.zarek.singleton.enumtype.Singleton.SPRING;
 
-        System.out.println(Thread.currentThread().getName()+"  singleton = " + singleton.hashCode());
+        System.out.println(Thread.currentThread().getName() + "  singleton = " + singleton.hashCode());
     }
 }
 
