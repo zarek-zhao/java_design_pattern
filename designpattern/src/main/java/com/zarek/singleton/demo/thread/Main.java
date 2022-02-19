@@ -22,17 +22,14 @@ public class Main {
 
         Thread.sleep(1000);
         int count = 0;
-        while (true) {
+        do {
             instance.execute(() -> {
                 System.out.println(1234);
                 System.out.println("Thread.currentThread().getName() = " + Thread.currentThread().getName());
             });
             count++;
 
-            if (count == 30) {
-                break;
-            }
-        }
+        } while (count != 30);
 //        instance.shutdown();
     }
 }
@@ -57,9 +54,13 @@ class ThreadPoolService {
     {
     }
 
-    ;
 
-    // 获取单例的线程池对象
+
+    /**
+     * 获取单例的线程池对象
+     *
+     * @return ThreadPoolExecutor
+     */
     public static ThreadPoolExecutor getInstance()
     {
         if (executor == null) {
